@@ -18,12 +18,36 @@ class Benefits extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.all(10.0),
-        child: Center(
-          // now print the value of 'benefit'
-          child: Text(
-            '${mylist.benefit}',
-            style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
-          ),
+        child: Column(
+          children: <Widget>[
+            CircleAvatar(
+              backgroundImage: AssetImage('assets/${mylist.pic}'),
+              maxRadius: 60.0,
+            ),
+            Text(
+              mylist.name,
+              style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.w500),
+            ),
+            SizedBox(
+              height: 40.0,
+            ),
+            Divider(
+              color: Colors.black,
+              thickness: 2.0,
+              endIndent: 50.0,
+              indent: 50.0,
+            ),
+            SizedBox(
+              height: 70.0,
+            ),
+            Center(
+              // now print the value of 'benefit'
+              child: Text(
+                '${mylist.benefit}',
+                style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+              ),
+            ),
+          ],
         ),
       ),
 
