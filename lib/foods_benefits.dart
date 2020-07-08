@@ -16,6 +16,7 @@ class Benefits extends StatelessWidget {
         title: Text('Benefits'),
         centerTitle: true,
       ),
+
       body: Padding(
         padding: const EdgeInsets.all(10.0),
         child: Column(
@@ -23,6 +24,9 @@ class Benefits extends StatelessWidget {
             CircleAvatar(
               backgroundImage: AssetImage('assets/${mylist.pic}'),
               maxRadius: 60.0,
+            ),
+            SizedBox(
+              height: 2.0,
             ),
             Text(
               mylist.name,
